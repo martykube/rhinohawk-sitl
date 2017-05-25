@@ -11757,9 +11757,11 @@ div#notebook {
 <p>There are many pieces needed to locate Joe -- AI software and a custom built UAV.  Software and hardware need to work together seamlessly.  Early in this project that's not going to happen.  One tactic used to ease software development is to simlulate the hardware. This makes software development easier since hardware issues are removed.  The following describes the SILT simulation we used to facilitate developing our Challenge solution.</p>
 <h2 id="SILT">SILT<a class="anchor-link" href="#SILT">&#182;</a></h2><p>The Rhinohawk team's configuration for the Challenge is a Quadcopter with a camera attached.  The Quadcopter is controlled by a PX4 microprocessor autopilot that can operate in joystick controlled and autonomous modes.  The SILT simultaion compiles the PX4 firmware for a Linux system and uses <a href="http://gazebosim.org/">Gazebo</a> to simulate the Quadcopter and the sensors attached to the quadcopter.  The image pipeline is implemented in <a href="http://www.ros.org/">ROS</a> and interacts with the PX4 via <a href="http://wiki.ros.org/mavros">Mavros</a>.  The entire SILT simulation runs on one laptop.</p>
 <p>The simulation is based on the PX4 SILT simulation has a Quadcopter simulator among other vehicle models.  We added a camera to the PX4 Iiris Quadcopetr model.  We added a large blue box as our search target instead of Joe We also added a gas station for context:</p>
-<p>gas station</p>
+<p><img src="gas-station.png" alt="SITL Sceen"></p>
 <p>The blue box was located on the ground plane at fixed location (3, 3).  The goal of the simultaion is to fly the quadcopter around and process images from the camera.  If all goes well we will predict the box's location from the images and the predicted location will match with the known location.</p>
-<h2 id="Image-Pipleline">Image Pipleline<a class="anchor-link" href="#Image-Pipleline">&#182;</a></h2>
+<p>The quadcopter model comes from the PX4 project. This image show the Gazebo client rendering of the  simulated quadcopter:</p>
+<p><img src="quad-detail.png" alt="Iris Quad"></p>
+<h2 id="Image-Pipleline">Image Pipleline<a class="anchor-link" href="#Image-Pipleline">&#182;</a></h2><h2 id="Coordinate-Transforms">Coordinate Transforms<a class="anchor-link" href="#Coordinate-Transforms">&#182;</a></h2>
 </div>
 </div>
 </div>
